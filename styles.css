@@ -1,4 +1,10 @@
 body {
+    background-image: url('image/background4.jpg');
+    background-size:cover;
+
+    background-attachment: fixed;
+
+  
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
@@ -6,52 +12,76 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+
+    width: 300px;
+    margin: 20px auto;
 }
 
 .container {
     text-align: center;
+    position: relative;
+  justify-content: center;
 }
 
+
+ 
 .magic-ball {
-    width: 200px;
-    height: 200px;
-    background-color: #000000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  background: black;
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+  margin: 0;
+  background: radial-gradient(circle at 100px 100px, #2E4374, #000);
+ 
+
+}
+.answers {
     font-size: 18px;
     font-weight: bold;
     color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
 #shake-button {
-    background-color: #3498db;
+    background-color: #7C81AD;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    position: absolute;
+    top: 20%;
+    left:43%;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
+    transform: perspective(100px) rotateX(10deg); /* Apply a 3D perspective effect */
+    transition: transform 0.3s ease; /* Add a transition for smooth animation */
 }
-
 @keyframes shake {
     0% {
         transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-10px);
-    }
-    50% {
-        transform: translateX(10px);
-    }
-    75% {
-        transform: translateX(10px);
-    }
-    100% {
+      }
+      25% {
+        transform: translateX(-5px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      75% {
+        transform: translateX(-5px);
+      }
+      100% {
         transform: translateX(0);
-    }
-
+      }
 }
+
+
 
 .shake {
     animation: shake 2.0s;
